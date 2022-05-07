@@ -14,8 +14,10 @@ describe 'Usuário visita tela inicial' do
     it 'e vê os galpões cadastrados' do
         #Arrange
         #Cadastrar 2 galpões: Rio e Maceió
-        Warehouse.create(name:'Rio', code:'SDU', city:'Rio de Janeiro', area:60_000)
-        Warehouse.create(name:'Maceió', code:'MCZ', city:'Maceió', area:50_000)
+        Warehouse.create(name:'Rio', code:'SDU', city:'Rio de Janeiro', area:60_000, address:'Avenida do Porto, 1000', 
+                         zip_code:'20000100', description:'Galpão do Rio.')
+        Warehouse.create(name:'Maceió', code:'MCZ', city:'Maceió', area:50_000, address:'Avenida Atlântica, 50', 
+            zip_code:'80000100', description:'Perto do aeroporto.')
 
         #Act
         visit(root_path)
@@ -26,12 +28,12 @@ describe 'Usuário visita tela inicial' do
         expect(page).to have_content('Rio')
         expect(page).to have_content('Código: SDU')
         expect(page).to have_content('Cidade: Rio de Janeiro')
-        expect(page).to have_content('60000 m2')
+        expect(page).to have_content('60000 m²')
 
         expect(page).to have_content('Maceió')
         expect(page).to have_content('Código: MCZ')
         expect(page).to have_content('Cidade: Maceió')
-        expect(page).to have_content('50000 m2')
+        expect(page).to have_content('50000 m²')
     end
 
     it 'e não existem galpões cadastrados' do
