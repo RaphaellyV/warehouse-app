@@ -15,9 +15,9 @@ describe 'Usuário visita tela inicial' do
         #Arrange
         #Cadastrar 2 galpões: Rio e Maceió
         Warehouse.create(name:'Rio', code:'SDU', city:'Rio de Janeiro', area:60_000, address:'Avenida do Porto, 1000', 
-                         zip_code:'20000100', description:'Galpão do Rio.')
+                         zip_code:'20000-100', description:'Galpão do Rio.')
         Warehouse.create(name:'Maceió', code:'MCZ', city:'Maceió', area:50_000, address:'Avenida Atlântica, 50', 
-            zip_code:'80000100', description:'Perto do aeroporto.')
+            zip_code:'18000-100', description:'Perto do aeroporto.')
 
         #Act
         visit(root_path)

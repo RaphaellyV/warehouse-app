@@ -9,7 +9,7 @@ class WarehousesController < ApplicationController
     end
 
     def create
-        warehouse_params=params.require(:warehouse). permit(:name, :code, :city, :description, 
+        warehouse_params=params.require(:warehouse).permit(:name, :code, :city, :description, 
                                                             :address, :zip_code, :area)
         @warehouse=Warehouse.new(warehouse_params)
             
