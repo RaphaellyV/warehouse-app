@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      warehouse: 'Galpão'
+    attributes:
+      warehouse:
+        name: 'Nome'
+        code: 'Código'
+        address: 'Endereço'
+        zip_code: 'CEP'
+        city: 'Cidade'
+        area: 'Área'
+        description: 'Descrição'
