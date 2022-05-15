@@ -13,9 +13,9 @@ describe 'Usuário vê fornecedores' do
 
   it 'com sucesso' do
     #Arrange
-    Supplier.create!(corporate_name: 'ACME LTDA', brand_name: 'ACME', registration_number: '12.345.678/001-22', 
+    Supplier.create!(corporate_name: 'ACME LTDA', brand_name: 'ACME', registration_number: '12.345.678/0001-22', 
                      full_address: 'Avenida das Palmas, 100', city: 'Bauru', state: 'SP', email: 'contato@acme.com.br')
-    Supplier.create!(corporate_name: 'Stark Industries', brand_name: 'Stark', registration_number: '91.234.567/001-22', 
+    Supplier.create!(corporate_name: 'Stark Industries', brand_name: 'Stark', registration_number: '91.234.567/0001-22', 
                       full_address: 'Torre da Indústria, 1', city: 'Teresina', state: 'PI', email: 'iron@stark.com.br')
     #Act
     visit root_path
